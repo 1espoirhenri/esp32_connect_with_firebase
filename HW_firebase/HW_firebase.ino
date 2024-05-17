@@ -12,14 +12,13 @@
 #define LIGHT_SENSOR_ANALOG_PIN 34
 #define LED_PIN 4
 
-#define DATABASE_URL "cuoiki-3ba01-default-rtdb.firebaseio.com" //<databaseName>.firebaseio.com or <databaseName>.<region>.firebasedatabase.app
-#define FIREBASE_HOST "cuoiki-3ba01-default-rtdb.firebaseio.com" // Đảm bảo có https://
-#define FIREBASE_AUTH "AIzaSyAx3qvJD4pUavw75i_DOW3kh9V6sNt_4nI"
+#define DATABASE_URL "your-database-url" //<databaseName>.firebaseio.com or <databaseName>.<region>.firebasedatabase.app
+#define FIREBASE_HOST "your-firebase-host" // Đảm bảo có https://
+#define FIREBASE_AUTH "your-firebase-auth"
 
-// #define WIFI_SSID "Wifi"
-// #define WIFI_PASSWORD "w!f!nenh@:>"
-#define WIFI_SSID "D304B_5G"
-#define WIFI_PASSWORD "13571357"
+
+#define WIFI_SSID "your-wifi-name"
+#define WIFI_PASSWORD "your-wifi-password"
 
 FirebaseConfig config;
 FirebaseAuth auth;
@@ -41,24 +40,13 @@ void setup() {
   }
   Serial.println("\nConnected to WiFi");
 
-  //Connect firebase
-  // Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
-  // Firebase.reconnectWiFi(true);
-
-  // Firebase.setReadTimeout(fbdo, 1000 * 60);
-  // Firebase.setWriteSizeLimit(fbdo, "tiny");
-
-  // config.host = FIREBASE_HOST;
-  // config.api_key = FIREBASE_AUTH;
-  // Firebase.begin(&config, &auth);
-
   config.database_url = DATABASE_URL;
 
   config.signer.test_mode = true;
   
   Firebase.reconnectWiFi(true);
-  fbdo.setBSSLBufferSize(4096 /* Rx buffer size in bytes from 512 - 16384 */, 1024 /* Tx buffer size in bytes from 512 - 16384 */);
-  /* Initialize the library with the Firebase authen and config */
+  fbdo.setBSSLBufferSize(4096 , 1024 );
+  
   Firebase.begin(&config, &auth);
   dht.begin();
 }
@@ -90,11 +78,6 @@ void loop() {
   Serial.print("Soil Moisture: ");
   Serial.print(doam_dat);
   Serial.println("%");
-
-  // Firebase.setFloat(fbdo, "Nhietdo", t);
-  // Firebase.setFloat(fbdo, "DoamKK", h);
-  // Firebase.setInt(fbdo, "Anhsang", lux);
-  // Firebase.setInt(fbdo, "Doamdat", doam_dat);
 
   // Gửi giá trị nhiệt độ
 Firebase.setFloat(fbdo, "/TT_nhung/Nhietdo", t);
