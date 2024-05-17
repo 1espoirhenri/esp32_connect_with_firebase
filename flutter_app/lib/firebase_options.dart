@@ -4,16 +4,6 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
-/// Default [FirebaseOptions] for use with your Firebase apps.
-///
-/// Example:
-/// ```dart
-/// import 'firebase_options.dart';
-/// // ...
-/// await Firebase.initializeApp(
-///   options: DefaultFirebaseOptions.currentPlatform,
-/// );
-/// ```
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -41,54 +31,58 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAx3qvJD4pUavw75i_DOW3kh9V6sNt_4nI',
-    appId: '1:768181578965:web:dd5c7e3fd96bc5de10865c',
-    messagingSenderId: '768181578965',
-    projectId: 'cuoiki-3ba01',
-    authDomain: 'cuoiki-3ba01.firebaseapp.com',
-    databaseURL: 'https://cuoiki-3ba01-default-rtdb.firebaseio.com',
-    storageBucket: 'cuoiki-3ba01.appspot.com',
-    measurementId: 'G-ZSMH7MWT48',
+    apiKey: 'your_api_key',
+    appId: 'your_app_id',
+    messagingSenderId: 'your-meassageing-sender-id',
+    projectId: 'your-project-id',
+    authDomain: 'your-auth-domain',
+    databaseURL: 'your-databaseURL',
+    storageBucket: 'your_storage_bucket',
+    measurementId: 'your-meanserment-id',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBr5zrcLwN_GHxEMvGr9lISVxfXrXuu42w',
-    appId: '1:768181578965:android:68c938521d5a127310865c',
-    messagingSenderId: '768181578965',
-    projectId: 'cuoiki-3ba01',
-    databaseURL: 'https://cuoiki-3ba01-default-rtdb.firebaseio.com',
-    storageBucket: 'cuoiki-3ba01.appspot.com',
+    apiKey: 'your_api_key',
+    appId: 'your_app_id',
+    messagingSenderId: 'your-meassageing-sender-id',
+    projectId: 'your-project-id',
+    authDomain: 'your-auth-domain',
+    databaseURL: 'your-databaseURL',
+    storageBucket: 'your_storage_bucket',
+    measurementId: 'your-meanserment-id',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDkP6pgZk4HR7X3uRT5tAJXsaILyNSahbU',
-    appId: '1:768181578965:ios:88da6245ecc1366b10865c',
-    messagingSenderId: '768181578965',
-    projectId: 'cuoiki-3ba01',
-    databaseURL: 'https://cuoiki-3ba01-default-rtdb.firebaseio.com',
-    storageBucket: 'cuoiki-3ba01.appspot.com',
-    iosBundleId: 'com.example.cuoiKi',
+    apiKey: 'your_api_key',
+    appId: 'your_app_id',
+    messagingSenderId: 'your-meassageing-sender-id',
+    projectId: 'your-project-id',
+    authDomain: 'your-auth-domain',
+    databaseURL: 'your-databaseURL',
+    storageBucket: 'your_storage_bucket',
+    measurementId: 'your-meanserment-id',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDkP6pgZk4HR7X3uRT5tAJXsaILyNSahbU',
-    appId: '1:768181578965:ios:88da6245ecc1366b10865c',
-    messagingSenderId: '768181578965',
-    projectId: 'cuoiki-3ba01',
-    databaseURL: 'https://cuoiki-3ba01-default-rtdb.firebaseio.com',
-    storageBucket: 'cuoiki-3ba01.appspot.com',
-    iosBundleId: 'com.example.cuoiKi',
+    apiKey: 'your_api_key',
+    appId: 'your_app_id',
+    messagingSenderId: 'your-meassageing-sender-id',
+    projectId: 'your-project-id',
+    authDomain: 'your-auth-domain',
+    databaseURL: 'your-databaseURL',
+    storageBucket: 'your_storage_bucket',
+    measurementId: 'your-meanserment-id',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAx3qvJD4pUavw75i_DOW3kh9V6sNt_4nI',
-    appId: '1:768181578965:web:f90c4c09b53ee5dd10865c',
-    messagingSenderId: '768181578965',
-    projectId: 'cuoiki-3ba01',
-    authDomain: 'cuoiki-3ba01.firebaseapp.com',
-    databaseURL: 'https://cuoiki-3ba01-default-rtdb.firebaseio.com',
-    storageBucket: 'cuoiki-3ba01.appspot.com',
-    measurementId: 'G-Q9Z0FRB9BM',
+    apiKey: 'your_api_key',
+    appId: 'your_app_id',
+    messagingSenderId: 'your-meassageing-sender-id',
+    projectId: 'your-project-id',
+    authDomain: 'your-auth-domain',
+    databaseURL: 'your-databaseURL',
+    storageBucket: 'your_storage_bucket',
+    measurementId: 'your-meanserment-id',
   );
 
 }
